@@ -1,0 +1,11 @@
+{
+  "assets": [
+    {"id": "BOND001", "type": "bond", "name": "Corp Bond A", "value": 5000000, "duration": 5, "rating": "AA"},
+    {"id": "BOND002", "type": "bond", "name": "Corp Bond B", "value": 3000000, "duration": 8, "rating": "BBB"},
+    {"id": "LOAN001", "type": "loan", "name": "Commercial Loan A", "value": 8000000, "rate_type": "floating"},
+    {"id": "LOAN002", "type": "loan", "name": "Commercial Loan B", "value": 4000000, "rate_type": "fixed"},
+    {"id": "EQ001", "type": "equity", "name": "Equity Position A", "value": 6000000, "sector": "tech"},
+    {"id": "EQ002", "type": "equity", "name": "Equity Position B", "value": 4000000, "sector": "energy"},
+    {"id": "DERIV001", "type": "derivative", "name": "Interest Rate Swap", "value": 2000000, "notional": 20000000}
+  ]
+}
