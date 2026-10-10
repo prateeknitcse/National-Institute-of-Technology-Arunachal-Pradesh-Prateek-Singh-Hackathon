@@ -6,16 +6,26 @@ from src.nlp.classify import classify_event
 from src.nlp.impact_rag import score_impact
 
 TRACKED_COMPANIES = {
-    "AAPL": ["apple", "aapl"],
-    "MSFT": ["microsoft", "msft"],
-    "GOOGL": ["google", "alphabet", "googl"],
-    "AMZN": ["amazon", "amzn"],
-    "TSLA": ["tesla", "tsla"],
-    "JPM": ["jpmorgan", "jp morgan", "jpm"],
-    "NVDA": ["nvidia", "nvda"],
-    "META": ["meta", "facebook"],
-    "V": ["visa"],
-    "WMT": ["walmart", "wmt"],
+    "RELIANCE": ["reliance"],
+    "TCS": ["tcs", "tata consultancy"],
+    "INFY": ["infosys"],
+    "ICICIBANK": ["icici"],
+    "HDFCBANK": ["hdfc bank", "hdfc"],
+    "SBIN": ["sbi", "state bank of india"],
+    "WIPRO": ["wipro"],
+    "TATAMOTORS": ["tata motors"],
+    "TATASTEEL": ["tata steel"],
+    "TATAELXSI": ["tata elxsi"],
+    "TATACONSUM": ["tata consumer"],
+    "CYIENT": ["cyient"],
+    "AXISBANK": ["axis bank"],
+    "KOTAKBANK": ["kotak"],
+    "BAJFINANCE": ["bajaj finance"],
+    "MARUTI": ["maruti"],
+    "SUNPHARMA": ["sun pharma"],
+    "ITC": ["itc"],
+    "LT": ["larsen", "l&t"],
+    "ADANIENT": ["adani"],
 }
 
 def extract_company(title: str, body: str) -> str:

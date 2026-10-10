@@ -8,6 +8,8 @@ LABEL_DESCRIPTIONS = {
     "Credit Event": "credit rating downgrade, default, bankruptcy, or debt distress",
     "Merger/Acquisition": "company merger, acquisition, or takeover",
     "Product Launch": "new product launch or product announcement",
+    "Earnings/Financial Results": "company quarterly earnings, profit, revenue, or dividend results",
+    "Corporate Action": "share buyback, bond issuance, stock split, or board approval",
 }
 
 LABELS = list(LABEL_DESCRIPTIONS.keys())

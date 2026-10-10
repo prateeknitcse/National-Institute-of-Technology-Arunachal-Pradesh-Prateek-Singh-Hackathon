@@ -5,6 +5,7 @@ from src.stress_test.portfolio import run_stress_test
 IMPACT_THRESHOLD = 7
 RISK_EVENT_TYPES = ["Geopolitical", "Macroeconomic", "Credit Event"]
 
+
 def check_and_run_stress_tests():
     session = SessionLocal()
     high_impact = session.query(RiskSignal).filter(
@@ -18,6 +19,7 @@ def check_and_run_stress_tests():
         result = run_stress_test(signal.event_type, signal.impact_score)
         results.append(result)
     return results
+
 
 if __name__ == "__main__":
     results = check_and_run_stress_tests()
