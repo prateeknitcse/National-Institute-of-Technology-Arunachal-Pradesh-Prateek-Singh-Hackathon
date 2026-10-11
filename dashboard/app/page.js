@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   const filteredSignals = selectedCompany
-    ? signals.filter((s) => s.company === selectedCompany)
+    ? signals.filter((s)=>s.company===selectedCompany)
     : signals;
 
   return (
