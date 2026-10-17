@@ -5,3 +5,5 @@ __pycache__/
 node_modules/
 .next/
 chroma_db/
+start-dev.bat
+start-dev.ps1

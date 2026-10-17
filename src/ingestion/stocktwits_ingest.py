@@ -7,6 +7,11 @@ from src.db.models import RawDocument
 TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "JPM", "NVDA", "META", "V", "WMT"]
 HEADERS = {"User-Agent": "risk-engine-script/1.0"}
 
+def clean_text(text):
+    if not text:
+        return ""
+    return text.replace("\x00", "")
+
 def fetch_stocktwits(limit_per_ticker=30):
     session = SessionLocal()
     new_count = 0
@@ -37,17 +42,19 @@ def fetch_stocktwits(limit_per_ticker=30):
             except ValueError:
                 published = datetime.now()
 
+            body_clean = clean_text(msg.get("body", ""))
+
             doc = RawDocument(
                 source="stocktwits",
-                title=f"{ticker}: {msg.get('body', '')[:80]}",
-                body=msg.get("body", ""),
+                title=f"{ticker}: {body_clean[:80]}",
+                body=body_clean,
                 raw_url=link,
                 published_at=published,
             )
             session.add(doc)
             new_count += 1
 
-        time.sleep(1)  # be polite, avoid rate limiting
+        time.sleep(1)  
 
     session.commit()
     session.close()
